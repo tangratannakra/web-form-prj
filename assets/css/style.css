@@ -58,6 +58,14 @@ nav {
   padding: 50px 0px 50px;
 }
 
+nav .current {
+  border-bottom: 2px solid var(--prime-green);
+}
+
+nav .current a {
+  background-color: var(--prime-green);
+}
+
 nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -96,10 +104,6 @@ nav ul li a {
   text-decoration: none;
   position: absolute;
   top: -15px;
-}
-
-nav ul li .current {
-  border-bottom: 2px solid var(--prime-green);
 }
 
 #left {
