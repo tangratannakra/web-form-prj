@@ -1,0 +1,23 @@
+#right {
+    display: none;
+    background: linear-gradient(90deg, rgba(29, 186, 255, 0.8), rgba(133, 190, 65, 0.5)), url(/assets/img/991-ratio.jpg);
+    background-size: cover;
+    color: white;
+
+    @media (min-width:768px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40%;
+    }
+}
+
+.add-container {
+    h1 {
+        width: 50%;
+        padding-bottom: 25px;
+    }
+
+    width: 70%;
+    padding: 25px 25px 25px 0px;
+}
