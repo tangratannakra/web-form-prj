@@ -33,6 +33,46 @@ body {
   display: flex;
 }
 
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  width: 33%;
+  border-bottom: 2px solid var(--prime-purple);
+  margin: 0px 1px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+nav ul li a {
+  background: var(--prime-purple);
+  color: white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  position: absolute;
+  top: -15px;
+}
+
 #left {
   padding: 25px;
   width: 100%;
@@ -104,6 +144,10 @@ input::placeholder {
   text-transform: capitalize;
 }
 
+input:focus {
+  outline: var(--prime-green) auto 1px;
+}
+
 label {
   font-size: 0.9rem;
   padding-top: 10px;
@@ -113,7 +157,10 @@ label {
 
 #right {
   display: none;
-  background-color: var(--prime-blue);
+  background: -webkit-gradient(linear, left top, right top, from(rgba(29, 186, 255, 0.8)), to(rgba(133, 190, 65, 0.5))), url(/assets/img/991-ratio.jpg);
+  background: linear-gradient(90deg, rgba(29, 186, 255, 0.8), rgba(133, 190, 65, 0.5)), url(/assets/img/991-ratio.jpg);
+  background-size: cover;
+  color: white;
 }
 
 @media (min-width: 768px) {
@@ -132,12 +179,18 @@ label {
 }
 
 .add-container {
-  padding: 25px;
+  width: 70%;
+  padding: 25px 25px 25px 0px;
+}
+
+.add-container h1 {
+  width: 50%;
+  padding-bottom: 25px;
 }
 
 footer {
   background-color: var(--footer);
-  padding: 50px 25px 25px;
+  padding: 25px 25px;
   color: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -154,7 +207,7 @@ footer section {
   -ms-flex-preferred-size: 350px;
       flex-basis: 350px;
   font-size: 0.8rem;
-  padding: 0px 20px;
+  padding: 20px;
 }
 
 footer h1 {
