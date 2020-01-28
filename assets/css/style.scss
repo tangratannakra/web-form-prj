@@ -19,11 +19,33 @@ body {
     min-width: 80vw;
 }
 
+#brand {
+    font-family: var(--logo-font);
+    font-size: 1.7rem;
+    padding-bottom: 25px;
+
+    .green {
+        color: var(--prime-green);
+    }
+
+    .blue {
+        color: var(--prime-blue);
+    }
+
+    .slogan {
+        color: var(--prime-grey);
+        font-family: var(--body-font);
+        font-size: 0.9rem;
+    }
+}
+
 #content {
     display: flex;
 }
 
 nav {
+    padding: 50px 0px 50px;
+
     ul {
         display: flex;
         list-style: none;
@@ -48,7 +70,10 @@ nav {
                 text-decoration: none;
                 position: absolute;
                 top: -15px;
+            }
 
+            .current {
+                border-bottom: 2px solid var(--prime-green);
             }
         }
     }
@@ -87,6 +112,20 @@ form {
         padding: 0px 10px;
         width: 150px;
         min-width: 50%;
+
+        &:first-child {
+            padding-left: 0px;
+        }
+
+        &:last-child {
+            padding-right: 0px;
+        }
+
+        &:only-child {
+            padding-left: 0px;
+            padding-right: 10px;
+
+        }
     }
 }
 
