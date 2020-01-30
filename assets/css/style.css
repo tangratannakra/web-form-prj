@@ -217,6 +217,15 @@ button.next:active {
   color: black;
 }
 
+button[type=submit] {
+  background-color: var(--prime-blue);
+  width: 150px;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
 #right {
   display: none;
   background: -webkit-gradient(linear, left top, right top, from(rgba(29, 186, 255, 0.8)), to(rgba(133, 190, 65, 0.5))), url(../img/991-ratio.jpg);

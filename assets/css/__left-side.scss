@@ -81,3 +81,12 @@ button.next {
         color: black;
     }
 }
+
+button[type=submit] {
+    background-color: var(--prime-blue);
+    width:150px;
+    padding:10px 25px;
+    border:none;
+    border-radius: 15px;
+    cursor: pointer;
+}
