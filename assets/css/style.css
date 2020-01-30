@@ -198,6 +198,19 @@ label {
   text-transform: capitalize;
 }
 
+button.next {
+  background-color: var(--prime-green);
+  border-radius: 15px;
+  border: 1px solid var(--second-green);
+  padding: 10px 25px;
+  cursor: pointer;
+}
+
+button.next:active {
+  background-color: var(--prime-blue);
+  color: black;
+}
+
 #right {
   display: none;
   background: -webkit-gradient(linear, left top, right top, from(rgba(29, 186, 255, 0.8)), to(rgba(133, 190, 65, 0.5))), url(../img/991-ratio.jpg);
@@ -267,6 +280,7 @@ footer h1 {
   --prime-purple: #501f54;
   --prime-blue: #1dbaff;
   --prime-green: #85be41;
+  --second-green: #75a53a;
   --footer: #466f7b;
   --body-font: 'Open Sans', sans-serif;
   --logo-font: 'Pacifico', cursive;
