@@ -22,6 +22,12 @@ body {
   font-family: var(--body-font);
 }
 
+p {
+  font-size: 1rem;
+  line-height: 1.6rem;
+  padding: 10px 0px;
+}
+
 #wrapper {
   background-color: var(--prime-white);
   min-height: 50vh;
@@ -117,7 +123,7 @@ nav ul li a {
   }
 }
 
-form h1 {
+form h1, form h2 {
   color: var(--prime-purple);
 }
 
@@ -157,7 +163,7 @@ form h1 {
   }
   .element:only-child {
     padding-left: 0px;
-    padding-right: 10px;
+    width: 100%;
   }
 }
 
@@ -194,7 +200,7 @@ input:focus {
 label {
   font-size: 0.9rem;
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   text-transform: capitalize;
 }
 

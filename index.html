@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="assets/scripts/script.js" defer></script>
-    <title>Document</title>
+    <title>Small Webform with JS</title>
 </head>
 
 <body>
@@ -32,21 +32,21 @@
                             <div class=" row">
                                 <div class="element">
                                     <label for="first-name">First name</label>
-                                    <input name="first-name" type="text" autocomplete="given-name" required>
+                                    <input name="first-name" type="text" autocomplete="given-name" placeholder="Firs Name" required>
                                 </div>
                                 <div class="element">
                                     <label for="last-name">last name</label>
-                                    <input name="last-name" type="text" autocomplete="family-name" required>
+                                    <input name="last-name" type="text" autocomplete="family-name" placeholder="Last Name" required>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="element">
                                     <label for="email">E-mail</label>
-                                    <input name="email" type="email" autocomplete="email" required>
+                                    <input name="email" type="email" autocomplete="email" placeholder="Your email" required>
                                 </div>
                                 <div class="element">
                                     <label for="last-name">phone</label>
-                                    <input type="text" autocomplete="phone" required>
+                                    <input type="tel" autocomplete="phone" placeholder="Phone number" required>
                                 </div>
                             </div>
                             <div class="row">
@@ -78,26 +78,30 @@
                                 </div>
                                 <div class="element">
                                     <label for="password">password</label>
-                                    <input type="text" name="password" placeholder="password">
+                                    <input type="password" name="password" placeholder="password">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="element">
-                                    <label for="">Blah</label>
-                                    <input type="checkbox">
+                                    <label for="lorem">Lorem</label>
+                                    <input name="lorem" type="checkbox">
                                 </div>
                                 <div class="element">
-                                    <label for="">Blah</label>
-                                    <input type="checkbox">
+                                    <label for="lorem2">Lorem ipsum dolor sit amet consectetur adipisicing elit</label>
+                                    <input name="lorem2" type="checkbox">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <h2>Terms and Conditions</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo dolores error nobis temporibus odio eligendi nihil consectetur cupiditate veniam excepturi.</p>
+                                <div class="element">
+                                    <label for="terms">I accept</label>
+                                    <input name="terms" type="checkbox">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="element">
-                                    <h2>Terms and Conditions</h2>
-                                    <div class="element">
-                                        <label for="">Blah</label>
-                                        <input type="checkbox">
-                                    </div>
+                                    <button type="submit">Submit</button>
                                 </div>
                             </div>
                         </section>

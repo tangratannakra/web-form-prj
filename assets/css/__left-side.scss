@@ -8,7 +8,7 @@
 }
 
 form {
-    h1 {
+    h1, h2 {
         color: var(--prime-purple);
     }
 }
@@ -41,8 +41,7 @@ form {
 
         &:only-child {
             padding-left: 0px;
-            padding-right: 10px;
-
+            width:100%;
         }
     }
 }
@@ -65,7 +64,7 @@ input {
 label {
     font-size: 0.9rem;
     padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
     text-transform: capitalize;
 }
 

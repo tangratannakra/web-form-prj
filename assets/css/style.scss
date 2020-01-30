@@ -13,6 +13,12 @@ body {
     font-family: var(--body-font);
 }
 
+p {
+    font-size:1rem;
+    line-height: 1.6rem;
+    padding:10px 0px;
+}
+
 #wrapper {
     background-color: var(--prime-white);
     min-height: 50vh;
