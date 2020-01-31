@@ -1,6 +1,11 @@
 const nav = document.querySelectorAll('.main-nav li');
 const nextBtn = document.querySelector('.next');
+const submitBtn = document.querySelector('button[type=submit]');
 
+submitBtn.addEventListener('click', function(e){  
+    e.preventDefault();
+    formValidationHandler();
+});
 nextBtn.addEventListener('click', nextHandler);
 
 for (const navBtn of nav) {
@@ -36,13 +41,7 @@ function switchPageHandler(e){
 
 function nextHandler(){
     nav.forEach(navEl => {
-        //if (navEl.classList == "current"){
-        //     navEl.classList = '';
-        // }
-        // else{
             navEl.firstChild.id=='second-page'?navEl.classList='current':navEl.classList="";
-      //  }
-
     })
 
     const allSections = document.querySelectorAll('.form-section');
@@ -52,13 +51,13 @@ function nextHandler(){
     });
 }
 
-function formValidation(){
+function formValidationHandler(){
+    //e.preventDefault();
     const inputFields = document.querySelectorAll('input.required');
 
     inputFields.forEach(input => {
         input.value.trim();
         if (input.type == 'text'){
-            //input.value.trim();
             if (input.value == ""){
                 input.placeholder = 'Please fill the required field';
                 input.classList.add('invalid');
@@ -66,10 +65,9 @@ function formValidation(){
         }
 
         if (input.type == 'checkbox'){
-            if (input.checked){
-                
-            } else {
+            if (!input.checked){
                 input.classList.add('invalid');
+                return false;
             }
         }
 
@@ -87,6 +85,5 @@ function formValidation(){
             }
         }
     });
+    return true;
 }
-
-formValidation();
