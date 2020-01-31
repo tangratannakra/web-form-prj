@@ -51,3 +51,42 @@ function nextHandler(){
         section.id == 'second-page'? section.classList.remove('hide'): section.classList.add('hide');
     });
 }
+
+function formValidation(){
+    const inputFields = document.querySelectorAll('input.required');
+
+    inputFields.forEach(input => {
+        input.value.trim();
+        if (input.type == 'text'){
+            //input.value.trim();
+            if (input.value == ""){
+                input.placeholder = 'Please fill the required field';
+                input.classList.add('invalid');
+            }
+        }
+
+        if (input.type == 'checkbox'){
+            if (input.checked){
+                
+            } else {
+                input.classList.add('invalid');
+            }
+        }
+
+        if (input.type == 'email'){
+            const regEx = new RegExp('/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/');
+            if (!regEx.test(input.value)){
+                input.classList.add('invalid');
+            }
+        }
+        
+        if (input.type =='tel'){
+            const regEx = new RegExp('/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/');
+            if (!regEx.test(input.value)){
+                input.classList.add('invalid')
+            }
+        }
+    });
+}
+
+formValidation();

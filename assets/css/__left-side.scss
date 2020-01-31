@@ -61,6 +61,10 @@ input {
     }
 }
 
+.invalid {
+    border:1px solid red;
+}
+
 label {
     font-size: 0.9rem;
     padding-top: 10px;
