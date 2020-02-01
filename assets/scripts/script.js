@@ -6,7 +6,14 @@ submitBtn.addEventListener('click', function(e){
     e.preventDefault();
     formValidationHandler();
 });
-nextBtn.addEventListener('click', nextHandler);
+
+nextBtn.addEventListener('click', function(e){
+    const validation = formValidationHandler();
+    console.log(validation)
+    if (validation){
+        nextHandler();
+    }    
+});
 
 for (const navBtn of nav) {
     navBtn.addEventListener('click', stepHandler);
@@ -52,8 +59,8 @@ function nextHandler(){
 }
 
 function formValidationHandler(){
-    //e.preventDefault();
     const inputFields = document.querySelectorAll('input.required');
+    let validationState = true;
 
     inputFields.forEach(input => {
         input.value.trim();
@@ -61,13 +68,14 @@ function formValidationHandler(){
             if (input.value == ""){
                 input.placeholder = 'Please fill the required field';
                 input.classList.add('invalid');
+                validationState = false;
             }
         }
 
         if (input.type == 'checkbox'){
             if (!input.checked){
                 input.classList.add('invalid');
-                return false;
+                validationState = false;
             }
         }
 
@@ -75,15 +83,17 @@ function formValidationHandler(){
             const regEx = new RegExp('/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/');
             if (!regEx.test(input.value)){
                 input.classList.add('invalid');
+                validationState = false;
             }
         }
         
         if (input.type =='tel'){
             const regEx = new RegExp('/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/');
             if (!regEx.test(input.value)){
-                input.classList.add('invalid')
+                input.classList.add('invalid');
+                validationState = false;
             }
         }
     });
-    return true;
+    return validationState;
 }
